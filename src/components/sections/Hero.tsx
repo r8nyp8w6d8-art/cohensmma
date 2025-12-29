@@ -24,9 +24,10 @@ const Hero = () => {
           <span className="text-primary">לקוחות אמיתיים</span>
         </h1>
         
-        <p className="mb-4 animate-fade-in-up animate-fade-in-delay-1 text-heading text-inherit">
-          במקרה הטוב הפרסום שלך גרוע. במקרה הרע הוא בכלל לא קיים.
-        </p>
+        <p className="mb-4 animate-fade-in-up animate-fade-in-delay-1 text-heading text-inherit">במקרה הטוב הפרסום שלך גרוע. 
+במקרה הרע הוא בכלל לא קיים.
+
+      </p>
         
         <p className="text-body-lg text-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up animate-fade-in-delay-2">
           אנחנו בונים לעסקים נוכחות ברשתות החברתיות שמייצרת אמון, חשיפה ותוצאות עסקיות. 
