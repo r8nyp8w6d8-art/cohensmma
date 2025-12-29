@@ -24,7 +24,7 @@ const Hero = () => {
           <span className="text-primary">לקוחות אמיתיים</span>
         </h1>
         
-        <p className="text-muted-foreground mb-4 animate-fade-in-up animate-fade-in-delay-1 text-heading">
+        <p className="mb-4 animate-fade-in-up animate-fade-in-delay-1 text-heading text-inherit">
           במקרה הטוב הפרסום שלך גרוע. במקרה הרע הוא בכלל לא קיים.
         </p>
         
