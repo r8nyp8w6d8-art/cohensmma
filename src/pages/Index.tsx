@@ -1,12 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import Hero from "@/components/sections/Hero";
+import Reframe from "@/components/sections/Reframe";
+import System from "@/components/sections/System";
+import ThreeWorlds from "@/components/sections/ThreeWorlds";
+import WhyThisWorks from "@/components/sections/WhyThisWorks";
+import About from "@/components/sections/About";
+import Fit from "@/components/sections/Fit";
+import Objections from "@/components/sections/Objections";
+import Contact from "@/components/sections/Contact";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background text-foreground">
+      <Header />
+      
+      <main className="pt-20">
+        <Hero />
+        <Reframe />
+        <System />
+        <ThreeWorlds />
+        <WhyThisWorks />
+        <About />
+        <Fit />
+        <Objections />
+        <Contact />
+      </main>
+      
+      <Footer />
     </div>
   );
 };
