@@ -1,27 +1,54 @@
 const About = () => {
   return (
     <section className="px-6 md:px-12 lg:px-24 py-section bg-card">
-      <div className="max-w-3xl">
-        <h2 className="text-display mb-12 animate-fade-in-up">
-          איתן כהן
-        </h2>
+      <div className="max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="order-2 md:order-1">
+            <h2 className="text-heading text-primary mb-4 animate-fade-in-up">
+              נעים מאוד, שמי איתן.
+            </h2>
+            
+            <div className="space-y-6 text-body leading-relaxed">
+              <p className="text-foreground animate-fade-in-up animate-fade-in-delay-1">
+                ב-2020, כשהעולם עצר מלכת והעסקים עברו לאונליין בן לילה – אני הייתי שם. 
+                התחלתי בגיל 18, עם מחשב נייד ורעיון. בלי קשרים ובלי תקציב, ייסדתי מותגי e-commerce מאפס, 
+                ניהלתי קמפיינים שייצרו עשרות אלפי שקלים, ובניתי מותג אישי שצבר 5 מיליון צפיות תוך חודשים ספורים.
+              </p>
+              
+              <p className="text-muted-foreground animate-fade-in-up animate-fade-in-delay-2">
+                אבל בין המספרים והלייקים, זיהיתי את הבעיה האמיתית: ה"טלפון השבור". 
+                ראיתי עסקים מצוינים טובעים כי האתר לא התכתב עם הקמפיין, והסושיאל לא הכיר את הקריאייטיב. 
+                הבנתי ששיווק חזק הוא לא אוסף של פעולות – הוא מערכת אחת מסונכרנת.
+              </p>
+              
+              <p className="text-foreground font-medium animate-fade-in-up animate-fade-in-delay-3">
+                הקמתי את COHEN SMMA כדי להיות המערכת הזו עבורך.
+              </p>
+            </div>
+          </div>
+          
+          <div className="order-1 md:order-2 animate-fade-in-up">
+            <div className="aspect-[4/5] bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-6xl font-bold text-primary mb-2">5M+</div>
+                <div className="text-muted-foreground">צפיות אורגניות</div>
+              </div>
+            </div>
+          </div>
+        </div>
         
-        <div className="space-y-8 text-body-lg leading-relaxed">
-          <p className="text-foreground animate-fade-in-up">
-            התחלתי בגיל 18, ב-2020, עם מחשב נייד ורעיון. בלי קשרים ובלי תקציב.
-          </p>
-          
-          <p className="text-muted-foreground animate-fade-in-up animate-fade-in-delay-1">
-            הקמתי מותגי e-commerce מאפס, ניהלתי קמפיינים שייצרו עשרות אלפי שקלים, בניתי מותג אישי שצבר 5 מיליון צפיות תוך חודשים ספורים. אבל בין המספרים והלייקים, זיהיתי את הבעיה האמיתית — ראיתי עסקים מצוינים טובעים כי השיווק שלהם היה מפוצל ולא מסונכרן.
-          </p>
-          
-          <p className="text-muted-foreground animate-fade-in-up animate-fade-in-delay-2">
-            אני לא מגיע מעולם הגרפיקה או הקריאייטיב. אני מגיע מעולם העסקים. אני יודע מה זה להחזיק עסק, לנהל עובדים, לבדוק דוח רווח והפסד. זה משנה את הדרך שבה אני מסתכל על שיווק.
-          </p>
-          
-          <p className="text-foreground animate-fade-in-up animate-fade-in-delay-3">
-            אני לא מתרגש מלייקים. אני שואל אם זה מזיז את השורה התחתונה.
-          </p>
+        <div className="mt-12 pt-12 border-t border-border">
+          <div className="grid md:grid-cols-2 gap-8">
+            <p className="text-body text-muted-foreground animate-fade-in-up">
+              כאן אין שבעה ספקים שונים שלא מדברים אחד עם השני. יש ראש אחד שרואה את התמונה המלאה: 
+              מבניית האתר והאסטרטגיה, ועד לקומפוזיציה בימי הצילום. הכל עובד בסנכרון מוחלט כי הכל נבנה על ידי אותן הידיים.
+            </p>
+            
+            <p className="text-body text-foreground animate-fade-in-up animate-fade-in-delay-1">
+              בלי מתווכים ובלי "מנהלי לקוחות" שמעבירים מסרים חלקיים. רק ניסיון מהשטח, עין קולנועית ותוצאות מוכחות. 
+              אני לא כאן כדי למכור לך חלומות – אני כאן כדי לבנות לך מערכת שתעבוד עבורך שנים קדימה.
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -1,13 +1,12 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
-import Reframe from "@/components/sections/Reframe";
-import System from "@/components/sections/System";
-import ThreeWorlds from "@/components/sections/ThreeWorlds";
-import WhyThisWorks from "@/components/sections/WhyThisWorks";
 import About from "@/components/sections/About";
+import Services from "@/components/sections/Services";
+import WhyUs from "@/components/sections/WhyUs";
+import Process from "@/components/sections/Process";
 import Fit from "@/components/sections/Fit";
-import Objections from "@/components/sections/Objections";
+import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
 
 const Index = () => {
@@ -15,15 +14,14 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       
-      <main className="pt-20">
+      <main className="pt-16">
         <Hero />
-        <Reframe />
-        <System />
-        <ThreeWorlds />
-        <WhyThisWorks />
         <About />
+        <Services />
+        <WhyUs />
+        <Process />
         <Fit />
-        <Objections />
+        <FAQ />
         <Contact />
       </main>
       

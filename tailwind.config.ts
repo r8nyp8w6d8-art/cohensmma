@@ -58,17 +58,17 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       spacing: {
-        section: "8rem",
+        section: "6rem",
         "section-sm": "4rem",
       },
       fontSize: {
-        "display-xl": ["clamp(3rem, 8vw, 6rem)", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "800" }],
-        "display": ["clamp(2.5rem, 6vw, 4.5rem)", { lineHeight: "1.15", letterSpacing: "-0.02em", fontWeight: "700" }],
-        "heading": ["clamp(1.75rem, 4vw, 2.5rem)", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "700" }],
-        "subheading": ["clamp(1.25rem, 2.5vw, 1.5rem)", { lineHeight: "1.4", fontWeight: "500" }],
-        "body-lg": ["1.25rem", { lineHeight: "1.7", fontWeight: "400" }],
-        "body": ["1.125rem", { lineHeight: "1.8", fontWeight: "400" }],
-        "body-sm": ["1rem", { lineHeight: "1.7", fontWeight: "400" }],
+        "display-xl": ["clamp(2.5rem, 7vw, 4.5rem)", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "800" }],
+        "display": ["clamp(2rem, 5vw, 3.5rem)", { lineHeight: "1.15", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "heading": ["clamp(1.5rem, 3vw, 2rem)", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "700" }],
+        "subheading": ["clamp(1.125rem, 2vw, 1.375rem)", { lineHeight: "1.4", fontWeight: "600" }],
+        "body-lg": ["1.125rem", { lineHeight: "1.7", fontWeight: "400" }],
+        "body": ["1rem", { lineHeight: "1.75", fontWeight: "400" }],
+        "body-sm": ["0.875rem", { lineHeight: "1.6", fontWeight: "400" }],
       },
       keyframes: {
         "accordion-down": {
@@ -95,12 +95,17 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
-        "fade-in-up": "fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
-        "slide-in-right": "slide-in-right 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "fade-in": "fade-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "fade-in-up": "fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "slide-in-right": "slide-in-right 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards",
       },
       transitionTimingFunction: {
         smooth: "cubic-bezier(0.16, 1, 0.3, 1)",
+      },
+      boxShadow: {
+        "soft": "0 4px 20px -4px hsl(220 15% 15% / 0.08)",
+        "medium": "0 8px 30px -6px hsl(220 15% 15% / 0.12)",
+        "primary": "0 8px 24px -6px hsl(222 100% 60% / 0.3)",
       },
     },
   },
