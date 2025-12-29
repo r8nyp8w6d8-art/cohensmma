@@ -30,7 +30,7 @@ const Hero = () => {
       </p>
         
         <p className="text-body-lg text-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up animate-fade-in-delay-2">
-          אנחנו בונים לעסקים נוכחות ברשתות החברתיות שמייצרת אמון, חשיפה ותוצאות שבאות לידי ביטוי במחזרות החודשיים -   <strong>לא בלייקים.</strong>
+          אנחנו בונים לעסקים נוכחות ברשתות החברתיות שמייצרת אמון, חשיפה ותוצאות שבאות לידי ביטוי במחזורים החודשיים -   <strong>לא בלייקים.</strong>
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-fade-in-delay-3">
