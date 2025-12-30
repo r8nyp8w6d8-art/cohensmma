@@ -1,5 +1,6 @@
 const Founder = () => {
-  return <section className="px-6 md:px-12 lg:px-24 py-section bg-card">
+  return (
+    <section className="px-6 md:px-12 lg:px-24 py-section bg-card">
       <div className="max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Portrait placeholder */}
@@ -29,8 +30,7 @@ const Founder = () => {
 
             <div className="space-y-4">
               <p className="text-body text-foreground animate-fade-in-up animate-fade-in-delay-1">
-                       התחלתי בגיל 18, עם מחשב נייד ורעיון. 
-ב-2020, כשהעולם עצר מלכת והעסקים עברו לאונליין בין לילה – אני הייתי שם. 
+                ב-2020, כשהעולם עצר מלכת והעסקים עברו לאונליין בין לילה – אני הייתי שם. התחלתי בגיל 18, עם מחשב נייד ורעיון.
               </p>
               
               <p className="text-body text-muted-foreground animate-fade-in-up animate-fade-in-delay-2">
@@ -54,6 +54,8 @@ const Founder = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Founder;
