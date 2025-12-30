@@ -34,7 +34,8 @@ const Founder = () => {
               </p>
               
               <p className="text-body text-muted-foreground animate-fade-in-up animate-fade-in-delay-2">
-                בלי קשרים ובלי תקציבים, ייסדתי מותגי e-commerce מאפס, ניהלתי קמפיינים שייצרו עשרות אלפי שקלים, ובניתי מותג אישי שצבר מיליוני צפיות תוך חודשים ספורים.
+                בלי קשרים ובלי תקציב, ייסדתי וניהלתי מותגי
+ e-commerce מאפס, ניהלתי קמפיינים שייצרו עשרות אלפי שקלים, ובניתי מותג אישי שצבר מיליוני צפיות תוך חודשים ספורים.
               </p>
               
               <p className="text-body text-muted-foreground animate-fade-in-up animate-fade-in-delay-3">
