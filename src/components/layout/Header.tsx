@@ -9,15 +9,16 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 lg:px-24 py-4 flex items-center justify-between bg-background/95 backdrop-blur-md border-b border-border/50">
-      <Button 
-        variant="hero" 
-        size="sm" 
+    <header className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 lg:px-24 py-4 flex items-center justify-between bg-background/80 backdrop-blur-xl border-b border-border/50">
+      <Button
+        variant="hero"
+        size="sm"
         onClick={scrollToContact}
+        className="btn-scale"
       >
         צרו קשר
       </Button>
-      
+
       <div className="flex items-center gap-1.5 text-lg font-bold tracking-wide">
         <span className="text-primary">SMMA</span>
         <span className="text-foreground">COHEN</span>

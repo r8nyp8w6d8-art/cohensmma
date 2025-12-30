@@ -21,22 +21,22 @@ const Process = () => {
     <section className="px-6 md:px-12 lg:px-24 py-section bg-background">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-display mb-4 animate-fade-in-up">
+          <h2 className="text-display mb-4 animate-blur-in">
             איך זה עובד
           </h2>
           <p className="text-body-lg text-muted-foreground animate-fade-in-up animate-fade-in-delay-1">
             תהליך פשוט, חד ויעיל
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
-            <div 
+            <div
               key={step.number}
-              className="relative animate-fade-in-up"
+              className="relative glass-card rounded-xl p-6 border border-border hover:border-primary/30 transition-all duration-500 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="text-7xl font-bold text-primary/10 mb-4">
+              <div className="text-6xl font-bold text-primary/20 mb-4">
                 {step.number}
               </div>
               <h3 className="text-heading text-foreground mb-3">
@@ -45,10 +45,6 @@ const Process = () => {
               <p className="text-body text-muted-foreground leading-relaxed">
                 {step.description}
               </p>
-              
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-12 left-0 w-full h-px bg-gradient-to-l from-transparent via-border to-border" />
-              )}
             </div>
           ))}
         </div>
