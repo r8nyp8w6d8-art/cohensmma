@@ -38,8 +38,10 @@ const About = () => {
         <div className="mt-12 pt-12 border-t border-border">
           <div className="grid md:grid-cols-2 gap-8">
             <p className="text-body text-muted-foreground animate-fade-in-up">
-              כאן אין שבעה ספקים שונים שלא מדברים אחד עם השני. יש ראש אחד שרואה את התמונה המלאה: 
-              מבניית האתר והאסטרטגיה, ועד לקומפוזיציה בימי הצילום. הכל עובד בסנכרון מוחלט כי הכל נבנה על ידי אותן הידיים.
+              לא עוד שבעה ספקים שונים בעלות אסטרונומית,
+לא עוד מנהלי לקוחות שמתווכים את החזון שלך לאין ספור גורמים נפרדים,
+ראש אחד שרואה את התמונה המלאה- מהאסטרטגיה, לבניית האתר ועד לימי הצילום.
+הכל נבנה באמצעות אותן הידיים כדי לעבוד בסנכרון מוחלט
             </p>
             
             <p className="text-body text-foreground animate-fade-in-up animate-fade-in-delay-1">
