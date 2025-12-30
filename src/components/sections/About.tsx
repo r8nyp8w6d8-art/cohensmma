@@ -19,7 +19,7 @@ const About = () => {
               </p>
               
               <p className="text-foreground font-medium animate-fade-in-up animate-fade-in-delay-3">
-                הקמתי את COHEN SMMA כדי להיות המערכת הזו עבורך.
+                ​‏Cohen SMMA היא המערכת הזו.   
               </p>
             </div>
           </div>
