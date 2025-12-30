@@ -19,16 +19,16 @@ const Fit = () => {
     <section className="px-6 md:px-12 lg:px-24 py-section bg-card">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-display mb-4 animate-fade-in-up">
+          <h2 className="text-display mb-4 animate-blur-in">
             בשבילכם או לא בשבילכם?
           </h2>
           <p className="text-body-lg text-muted-foreground animate-fade-in-up animate-fade-in-delay-1">
             אנחנו לא מתאימים לכולם.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-background p-8 rounded-2xl border border-primary/20 animate-fade-in-up">
+          <div className="glass-card p-8 rounded-2xl border border-primary/30 animate-fade-in-up">
             <h3 className="text-heading text-primary mb-6 flex items-center gap-3">
               <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                 <Check className="w-5 h-5 text-primary" />
@@ -37,15 +37,19 @@ const Fit = () => {
             </h3>
             <ul className="space-y-4">
               {forYou.map((item, index) => (
-                <li key={index} className="flex items-start gap-3 text-body text-foreground">
+                <li
+                  key={index}
+                  className="flex items-start gap-3 text-body text-foreground animate-fade-in-up"
+                  style={{ animationDelay: `${(index + 1) * 0.1}s` }}
+                >
                   <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-          
-          <div className="bg-background p-8 rounded-2xl border border-border animate-fade-in-up animate-fade-in-delay-1">
+
+          <div className="glass-card p-8 rounded-2xl border border-border animate-fade-in-up animate-fade-in-delay-1">
             <h3 className="text-heading text-muted-foreground mb-6 flex items-center gap-3">
               <div className="w-10 h-10 bg-muted rounded-full flex items-center justify-center">
                 <X className="w-5 h-5 text-muted-foreground" />
@@ -54,7 +58,11 @@ const Fit = () => {
             </h3>
             <ul className="space-y-4">
               {notForYou.map((item, index) => (
-                <li key={index} className="flex items-start gap-3 text-body text-muted-foreground">
+                <li
+                  key={index}
+                  className="flex items-start gap-3 text-body text-muted-foreground animate-fade-in-up"
+                  style={{ animationDelay: `${(index + 2) * 0.1}s` }}
+                >
                   <X className="w-5 h-5 text-muted-foreground/50 flex-shrink-0 mt-0.5" />
                   {item}
                 </li>

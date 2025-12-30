@@ -33,17 +33,18 @@ const FAQ = () => {
     <section className="px-6 md:px-12 lg:px-24 py-section bg-background">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-display mb-4 animate-fade-in-up">
+          <h2 className="text-display mb-4 animate-blur-in">
             שאלות נפוצות
           </h2>
         </div>
-        
-        <Accordion type="single" collapsible className="space-y-4 animate-fade-in-up animate-fade-in-delay-1">
+
+        <Accordion type="single" collapsible className="space-y-4">
           {faqs.map((faq, index) => (
-            <AccordionItem 
-              key={index} 
+            <AccordionItem
+              key={index}
               value={`item-${index}`}
-              className="bg-card border border-border rounded-xl px-6 data-[state=open]:border-primary/30"
+              className="glass-card border border-border rounded-xl px-6 data-[state=open]:border-primary/30 animate-fade-in-up transition-all duration-500"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <AccordionTrigger className="text-body-lg text-foreground text-right hover:text-primary py-6 [&>svg]:text-primary">
                 {faq.question}

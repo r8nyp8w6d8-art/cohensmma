@@ -11,37 +11,37 @@
 
 @layer base {
   :root {
-    /* Core palette - Light, clean, inviting */
-    --background: 0 0% 100%;
-    --foreground: 220 15% 15%;
+    /* Dark Premium Theme - #000000 background */
+    --background: 0 0% 0%;
+    --foreground: 220 14% 90%;
     
-    --card: 220 20% 97%;
-    --card-foreground: 220 15% 15%;
+    --card: 220 15% 6%;
+    --card-foreground: 220 14% 90%;
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 15%;
+    --popover: 220 15% 4%;
+    --popover-foreground: 220 14% 90%;
     
-    /* Primary - Vibrant Blue #3266FF */
+    /* Primary - Electric Blue #3266FF */
     --primary: 222 100% 60%;
     --primary-foreground: 0 0% 100%;
     
-    /* Secondary - Soft gray */
-    --secondary: 220 15% 95%;
-    --secondary-foreground: 220 15% 25%;
+    /* Secondary - Dark gray */
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 220 14% 85%;
     
     /* Muted - For subtle text and backgrounds */
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 220 15% 10%;
+    --muted-foreground: 220 10% 55%;
     
     /* Accent - Blue-tinted for hover states */
-    --accent: 222 100% 96%;
-    --accent-foreground: 222 100% 45%;
+    --accent: 222 100% 15%;
+    --accent-foreground: 222 100% 70%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 220 15% 90%;
-    --input: 220 15% 90%;
+    --border: 220 15% 15%;
+    --input: 220 15% 12%;
     --ring: 222 100% 60%;
     
     --radius: 12px;
@@ -49,30 +49,12 @@
     /* Custom tokens */
     --section-spacing: 6rem;
     --content-max-width: 1200px;
-    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .dark {
-    --background: 220 20% 10%;
-    --foreground: 0 0% 96%;
-    --card: 220 20% 14%;
-    --card-foreground: 0 0% 96%;
-    --popover: 220 20% 12%;
-    --popover-foreground: 0 0% 96%;
-    --primary: 222 100% 60%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 220 15% 20%;
-    --secondary-foreground: 0 0% 90%;
-    --muted: 220 15% 18%;
-    --muted-foreground: 220 10% 55%;
-    --accent: 222 100% 20%;
-    --accent-foreground: 222 100% 70%;
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 220 15% 22%;
-    --input: 220 15% 20%;
-    --ring: 222 100% 60%;
+    --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    
+    /* Glassmorphism */
+    --glass-bg: 220 15% 8% / 0.8;
+    --glass-border: 220 15% 20% / 0.5;
   }
 }
 
@@ -101,15 +83,21 @@
 }
 
 @layer utilities {
-  /* Smooth fade-in animations */
+  /* Smooth fade-in animations - snappier 0.5s */
   .animate-fade-in {
-    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     opacity: 0;
   }
   
   .animate-fade-in-up {
-    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     opacity: 0;
+  }
+  
+  .animate-blur-in {
+    animation: blurIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    filter: blur(10px);
   }
   
   .animate-fade-in-delay-1 {
@@ -126,6 +114,10 @@
   
   .animate-fade-in-delay-4 {
     animation-delay: 0.4s;
+  }
+  
+  .animate-fade-in-delay-5 {
+    animation-delay: 0.5s;
   }
   
   @keyframes fadeIn {
@@ -148,6 +140,30 @@
     }
   }
   
+  @keyframes blurIn {
+    from {
+      opacity: 0;
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8px);
+    }
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 2s ease-in-out infinite;
+  }
+  
   /* Text gradient for primary accent */
   .text-gradient {
     @apply bg-clip-text text-transparent;
@@ -167,13 +183,30 @@
     transform: translateY(-4px);
   }
 
-  /* Card hover effect */
+  /* Card hover effect with glow */
   .card-hover {
     transition: var(--transition-smooth);
   }
 
   .card-hover:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 40px -12px hsl(222 100% 60% / 0.15);
+    box-shadow: 0 0 30px -5px hsl(222 100% 60% / 0.4);
+    border-color: hsl(222 100% 60% / 0.5);
+  }
+  
+  /* Button scale effect */
+  .btn-scale {
+    transition: var(--transition-fast);
+  }
+  
+  .btn-scale:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Glassmorphism card */
+  .glass-card {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--glass-border));
   }
 }
