@@ -1,89 +1,61 @@
-import { 
-  Zap, 
-  Target, 
-  Camera, 
-  Palette, 
-  Lightbulb, 
-  Users, 
-  Megaphone, 
-  RefreshCcw, 
-  ShoppingCart, 
-  Video 
-} from "lucide-react";
-
+import { Zap, Target, Camera, Palette, Lightbulb, Users, Megaphone, RefreshCcw, ShoppingCart, Video } from "lucide-react";
 const Services = () => {
-  const services = [
-    {
-      icon: Zap,
-      title: "אוטומציה",
-      description: "בניית מערכות חכמות שחוסכות זמן וממירות לידים באופן אוטומטי.",
-    },
-    {
-      icon: Target,
-      title: "קמפיינים",
-      description: "פרסום ממוקד שמביא את הקהל הנכון.",
-    },
-    {
-      icon: Camera,
-      title: "ימי צילום",
-      description: "הפקת תוכן מותאם פלטפורמה ברמה קולנועית.",
-    },
-    {
-      icon: Palette,
-      title: "עיצוב גרפי",
-      description: "בניית שפה ויזואלית אחידה שגורמת לאנשים לזכור את המותג שלך.",
-    },
-    {
-      icon: Lightbulb,
-      title: "אסטרטגיה",
-      description: "מיפוי שוק, ניתוח מתחרים וביסוס תוכנית עסקית מותאמת אישית.",
-    },
-    {
-      icon: Users,
-      title: "ניהול סושיאל",
-      description: "תוכן עקבי, איכותי ואסטרטגי שבונה קהילה וזהות ייחודית.",
-    },
-    {
-      icon: Megaphone,
-      title: "משפיעניות",
-      description: "פרסום דרך מובילי דעת קהל שיוצרים אמון מהיר אצל הלקוח.",
-    },
-    {
-      icon: RefreshCcw,
-      title: "רימרקטינג",
-      description: "מערכת חכמה שלא משאירה פירורים על השולחן, נשארים בתודעה.",
-    },
-    {
-      icon: ShoppingCart,
-      title: "איקומרס",
-      description: "הקמה ואופטימיזציה של חנויות אונליין להגדלת המכירות.",
-    },
-    {
-      icon: Video,
-      title: "עריכת וידאו",
-      description: "עריכת תוכן ויראלי שגורם לצופים לעצור ולהפוך ללקוחות.",
-    },
-  ];
-
-  return (
-    <section id="services" className="px-6 md:px-12 lg:px-24 py-section bg-background">
+  const services = [{
+    icon: Zap,
+    title: "אוטומציה",
+    description: "בניית מערכות חכמות שחוסכות זמן וממירות לידים באופן אוטומטי."
+  }, {
+    icon: Target,
+    title: "קמפיינים",
+    description: "פרסום ממוקד שמביא את הקהל הנכון."
+  }, {
+    icon: Camera,
+    title: "ימי צילום",
+    description: "הפקת תוכן מותאם פלטפורמה ברמה קולנועית."
+  }, {
+    icon: Palette,
+    title: "עיצוב גרפי",
+    description: "בניית שפה ויזואלית אחידה שגורמת לאנשים לזכור את המותג שלך."
+  }, {
+    icon: Lightbulb,
+    title: "אסטרטגיה",
+    description: "מיפוי שוק, ניתוח מתחרים וביסוס תוכנית עסקית מותאמת אישית."
+  }, {
+    icon: Users,
+    title: "ניהול סושיאל",
+    description: "תוכן עקבי, איכותי ואסטרטגי שבונה קהילה וזהות ייחודית."
+  }, {
+    icon: Megaphone,
+    title: "משפיעניות",
+    description: "פרסום דרך מובילי דעת קהל שיוצרים אמון מהיר אצל הלקוח."
+  }, {
+    icon: RefreshCcw,
+    title: "רימרקטינג",
+    description: "מערכת חכמה שלא משאירה פירורים על השולחן, נשארים בתודעה."
+  }, {
+    icon: ShoppingCart,
+    title: "איקומרס",
+    description: "הקמה ואופטימיזציה של חנויות אונליין להגדלת המכירות."
+  }, {
+    icon: Video,
+    title: "עריכת וידאו",
+    description: "עריכת תוכן ויראלי שגורם לצופים לעצור ולהפוך ללקוחות."
+  }];
+  return <section id="services" className="px-6 md:px-12 lg:px-24 py-section bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-display mb-4 animate-fade-in-up">
             מה אנחנו עושים
           </h2>
           <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animate-fade-in-delay-1">
-            הכל מתחיל מאסטרטגיה ברורה ומסתיים בביצוע חד. אנחנו לא מייעצים – אנחנו מבצעים.
+            ​מנתחים, מתכננים ומבצעים.  
           </p>
         </div>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-          {services.map((service, index) => (
-            <div 
-              key={service.title}
-              className="group p-6 bg-card rounded-xl border border-border hover:border-primary/30 card-hover animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.05}s` }}
-            >
+          {services.map((service, index) => <div key={service.title} className="group p-6 bg-card rounded-xl border border-border hover:border-primary/30 card-hover animate-fade-in-up" style={{
+          animationDelay: `${index * 0.05}s`
+        }}>
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <service.icon className="w-6 h-6 text-primary" />
               </div>
@@ -93,12 +65,9 @@ const Services = () => {
               <p className="text-body-sm text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Services;
