@@ -1,64 +1,58 @@
-import { Check } from "lucide-react";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { CheckCircle } from "lucide-react";
 
 const WhyUs = () => {
-  const { ref, isVisible } = useScrollReveal();
-  
   const reasons = [
     {
-      title: "ראש אחד, מערכת שלמה",
-      description: "אתם מדברים עם מי שמבצע. בלי טלפונים שבורים, בלי תירוצים, בלי ״זה לא הצד שלי״."
+      title: "ניסיון אמיתי בשטח",
+      description: "ניסיון ביצירת מיליוני צפיות אורגניות, ניהול חנויות אונליין והקמת מותגים מאפס."
     },
     {
-      title: "תוצאות מדידות",
-      description: "כל שקל שמושקע עובד. דוחות שקופים, מספרים אמיתיים, ללא עשן ומראות."
+      title: "ביצוע, לא רק תכנון",
+      description: "אנחנו לא מסתפקים בלהגיד מה לעשות – אנחנו עושים. יד ביד עם בעלי העסקים."
     },
     {
-      title: "התאמה מלאה לעסק",
-      description: "לא מכניסים אתכם לתבנית. בונים אסטרטגיה שמתאימה לקהל, לתקציב ולמטרות שלכם."
+      title: "יצירתיות עם כיוון עסקי",
+      description: "תוכן יפה זה לא מספיק. אנחנו בונים תוכן שמניע פעולה ומייצר תוצאות."
     },
     {
-      title: "זמינות ותקשורת",
-      description: "אנחנו פה. עונים מהר, מעדכנים שוטף, ובונים יחסי עבודה ארוכי טווח."
+      title: "גישה בוטיק ואישית",
+      description: "עובדים עם מספר מצומצם של לקוחות. כל לקוח מקבל תשומת לב מלאה."
+    },
+    {
+      title: "תקשורת שקופה",
+      description: "אין הפתעות. דיווחים ברורים, זמינות גבוהה ושיתוף פעולה צמוד."
     }
   ];
 
   return (
     <section className="px-6 md:px-12 lg:px-24 py-section bg-card">
       <div className="max-w-5xl mx-auto">
-        <div 
-          ref={ref}
-          className={`text-center mb-16 scroll-reveal ${isVisible ? 'visible' : ''}`}
-        >
-          <h2 className="text-display mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-display mb-4 animate-blur-in">
             למה COHEN SMMA
           </h2>
-          <p className="text-body-lg text-muted-foreground">
-            מה מבדיל אותנו מכל השאר
+          <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animate-fade-in-delay-1">
+            ‏אנחנו יודעים איך לגרום לך לצמוח
           </p>
         </div>
 
-        <div 
-          className={`grid grid-cols-1 md:grid-cols-2 gap-6 stagger-reveal ${isVisible ? 'visible' : ''}`}
-        >
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reasons.map((reason, index) => (
             <div
               key={reason.title}
-              className="group p-6 glass-card rounded-xl border border-border card-hover"
-              style={{ transitionDelay: `${index * 0.1}s` }}
+              className="flex gap-4 p-5 glass-card rounded-xl border border-border hover:border-primary/30 transition-all duration-500 animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <Check className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-subheading text-foreground mb-2">
-                    {reason.title}
-                  </h3>
-                  <p className="text-body-sm text-muted-foreground leading-relaxed">
-                    {reason.description}
-                  </p>
-                </div>
+              <div className="flex-shrink-0">
+                <CheckCircle className="w-6 h-6 text-primary mt-1" />
+              </div>
+              <div>
+                <h3 className="text-subheading text-foreground mb-2">
+                  {reason.title}
+                </h3>
+                <p className="text-body-sm text-muted-foreground leading-relaxed">
+                  {reason.description}
+                </p>
               </div>
             </div>
           ))}

@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Instagram, MessageCircle, Mail } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Contact = () => {
   const { toast } = useToast();
-  const { ref, isVisible } = useScrollReveal();
   const [formData, setFormData] = useState({
     fullName: "",
     businessName: "",
@@ -44,51 +42,44 @@ const Contact = () => {
   return (
     <section id="contact" className="px-6 md:px-12 lg:px-24 py-section bg-primary">
       <div className="max-w-4xl mx-auto">
-        <div 
-          ref={ref}
-          className={`grid md:grid-cols-2 gap-12 items-start scroll-reveal ${isVisible ? 'visible' : ''}`}
-        >
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <h2 className="text-display text-primary-foreground mb-4">
+            <h2 className="text-display text-primary-foreground mb-4 animate-blur-in">
               מוכנים להתחיל?
             </h2>
 
-            <p className="text-body-lg text-primary-foreground/80 mb-8">
+            <p className="text-body-lg text-primary-foreground/80 mb-8 animate-fade-in-up animate-fade-in-delay-1">
               השאירו פרטים ונחזור אליכם לשיחת היכרות קצרה ללא התחייבות.
             </p>
 
-            {/* Social icon buttons */}
-            <div className="flex items-center gap-4">
+            <div className="space-y-4 text-primary-foreground/70 animate-fade-in-up animate-fade-in-delay-2">
               <a
                 href="https://instagram.com/cohensmma"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-14 h-14 bg-primary-foreground/10 border border-primary-foreground/20 rounded-xl flex items-center justify-center icon-btn hover:bg-primary-foreground/20 hover:border-primary-foreground/40"
-                aria-label="Instagram"
+                className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
               >
-                <Instagram className="w-6 h-6 text-primary-foreground" />
+                Instagram
               </a>
               <a
                 href="https://wa.me/972559310292"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-14 h-14 bg-primary-foreground/10 border border-primary-foreground/20 rounded-xl flex items-center justify-center icon-btn hover:bg-primary-foreground/20 hover:border-primary-foreground/40"
-                aria-label="WhatsApp"
+                className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
               >
-                <MessageCircle className="w-6 h-6 text-primary-foreground" />
+                WhatsApp
               </a>
               <a
                 href="mailto:cohensmma@gmail.com"
-                className="w-14 h-14 bg-primary-foreground/10 border border-primary-foreground/20 rounded-xl flex items-center justify-center icon-btn hover:bg-primary-foreground/20 hover:border-primary-foreground/40"
-                aria-label="Email"
+                className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
               >
-                <Mail className="w-6 h-6 text-primary-foreground" />
+                cohensmma@gmail.com
               </a>
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
+          <form onSubmit={handleSubmit} className="space-y-4 animate-fade-in-up animate-fade-in-delay-1">
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               <input
                 type="text"
                 name="fullName"
@@ -100,7 +91,7 @@ const Contact = () => {
               />
             </div>
 
-            <div>
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
               <input
                 type="text"
                 name="businessName"
@@ -112,7 +103,7 @@ const Contact = () => {
               />
             </div>
 
-            <div>
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <input
                 type="tel"
                 name="phone"
@@ -124,7 +115,7 @@ const Contact = () => {
               />
             </div>
 
-            <div>
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
               <textarea
                 name="message"
                 placeholder="ספרו לנו קצת"
@@ -138,7 +129,8 @@ const Contact = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-primary-foreground text-primary font-semibold hover:bg-primary-foreground/90 rounded-lg h-12 group btn-scale"
+              className="w-full bg-primary-foreground text-primary font-semibold hover:bg-primary-foreground/90 rounded-lg h-12 group btn-scale animate-fade-in-up"
+              style={{ animationDelay: "0.3s" }}
             >
               {isSubmitting ? "שולח..." : "שלחו לנו הודעה"}
               <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />

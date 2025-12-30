@@ -1,65 +1,29 @@
-import { useScrollReveal, useCountUp } from "@/hooks/useScrollReveal";
-
 const SocialProof = () => {
-  const { ref, isVisible } = useScrollReveal();
-  
-  const viewsCount = useCountUp(5000000, 2000, isVisible);
-  const projectsCount = useCountUp(50, 2000, isVisible);
-  const growthCount = useCountUp(300, 2000, isVisible);
-
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) {
-      return `${(num / 1000000).toFixed(0)}M+`;
-    }
-    if (num >= 1000) {
-      return `${(num / 1000).toFixed(0)}K+`;
-    }
-    return `${num}`;
-  };
-
   return (
     <section className="px-6 md:px-12 lg:px-24 py-section bg-background">
       <div className="max-w-6xl mx-auto">
-        <div 
-          ref={ref}
-          className={`text-center mb-16 scroll-reveal ${isVisible ? 'visible' : ''}`}
-        >
-          <h2 className="text-display mb-4">
-            תוצאות מדברות בשטח
-          </h2>
-          <p className="text-body-lg text-muted-foreground">
-            מספרים אמיתיים, תוצאות אמיתיות
-          </p>
-        </div>
+        <h2 className="text-display text-center mb-16 animate-blur-in">
+          תוצאות מדברות בשטח
+        </h2>
 
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Left stats */}
-          <div 
-            className={`space-y-6 scroll-reveal ${isVisible ? 'visible' : ''}`}
-            style={{ transitionDelay: '0.1s' }}
-          >
-            <div className="glass-card rounded-xl p-6 text-center card-hover">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                {formatNumber(viewsCount)}
-              </div>
-              <p className="text-body text-muted-foreground">צפיות אורגניות</p>
+          <div className="space-y-8 animate-fade-in-up animate-fade-in-delay-1">
+            <div className="glass-card p-6 rounded-xl border border-border">
+              <div className="text-4xl font-bold text-primary mb-2">5M+</div>
+              <p className="text-muted-foreground">צפיות אורגניות</p>
             </div>
-            <div className="glass-card rounded-xl p-6 text-center card-hover">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                {projectsCount}+
-              </div>
-              <p className="text-body text-muted-foreground">פרויקטים שהושלמו</p>
+            <div className="glass-card p-6 rounded-xl border border-border">
+              <div className="text-4xl font-bold text-primary mb-2">50+</div>
+              <p className="text-muted-foreground">פרויקטים שהושלמו</p>
             </div>
           </div>
 
           {/* Center screenshot placeholder */}
-          <div 
-            className={`scroll-reveal ${isVisible ? 'visible' : ''}`}
-            style={{ transitionDelay: '0.2s' }}
-          >
-            <div className="glass-card rounded-2xl border border-border aspect-[9/16] max-h-[500px] mx-auto flex items-center justify-center overflow-hidden">
+          <div className="animate-fade-in-up animate-fade-in-delay-2">
+            <div className="aspect-[9/16] max-h-[500px] mx-auto glass-card rounded-2xl border border-border flex items-center justify-center overflow-hidden">
               <div className="text-center p-8">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center">
+                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
                   <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
@@ -70,21 +34,14 @@ const SocialProof = () => {
           </div>
 
           {/* Right stats */}
-          <div 
-            className={`space-y-6 scroll-reveal ${isVisible ? 'visible' : ''}`}
-            style={{ transitionDelay: '0.3s' }}
-          >
-            <div className="glass-card rounded-xl p-6 text-center card-hover">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                {growthCount}%
-              </div>
-              <p className="text-body text-muted-foreground">גידול ממוצע בחשיפה</p>
+          <div className="space-y-8 animate-fade-in-up animate-fade-in-delay-3">
+            <div className="glass-card p-6 rounded-xl border border-border">
+              <div className="text-4xl font-bold text-primary mb-2">300%</div>
+              <p className="text-muted-foreground">גידול ממוצע בחשיפה</p>
             </div>
-            <div className="glass-card rounded-xl p-6 text-center card-hover">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                4.9★
-              </div>
-              <p className="text-body text-muted-foreground">דירוג לקוחות</p>
+            <div className="glass-card p-6 rounded-xl border border-border">
+              <div className="text-4xl font-bold text-primary mb-2">4.9★</div>
+              <p className="text-muted-foreground">דירוג לקוחות</p>
             </div>
           </div>
         </div>
