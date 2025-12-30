@@ -23,8 +23,7 @@ const WhyUs = () => {
             למה COHEN SMMA
           </h2>
           <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animate-fade-in-delay-1">
-            ‏ALL IN ONE SERVICE
-אנחנו יודעים איך לגרום לך לצמוח   
+            ‏אנחנו יודעים איך לגרום לך לצמוח   
           </p>
         </div>
         
