@@ -1,6 +1,5 @@
 const About = () => {
-  return (
-    <section className="px-6 md:px-12 lg:px-24 py-section bg-card">
+  return <section className="px-6 md:px-12 lg:px-24 py-section bg-card">
       <div className="max-w-4xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
@@ -16,9 +15,7 @@ const About = () => {
               </p>
               
               <p className="text-muted-foreground animate-fade-in-up animate-fade-in-delay-2">
-                אבל בין המספרים והלייקים, זיהיתי את הבעיה האמיתית: ה"טלפון השבור". 
-                ראיתי עסקים מצוינים טובעים כי האתר לא התכתב עם הקמפיין, והסושיאל לא הכיר את הקריאייטיב. 
-                הבנתי ששיווק חזק הוא לא אוסף של פעולות – הוא מערכת אחת מסונכרנת.
+                אבל בין המספרים והלייקים, זיהיתי את הבעיה האמיתית: ה"טלפון השבור". ראיתי עסקים מצוינים טובעים כי האתר לא התכתב עם הקמפיין, והסושיאל לא התכתב עם הקריאייטיב. הבנתי ששיווק הבנתי ששיווק טוב שעובד לאורך זמן צריך מערכת אחת חדה
               </p>
               
               <p className="text-foreground font-medium animate-fade-in-up animate-fade-in-delay-3">
@@ -51,8 +48,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
