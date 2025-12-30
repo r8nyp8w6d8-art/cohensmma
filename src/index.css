@@ -83,9 +83,9 @@
 }
 
 @layer utilities {
-  /* Smooth fade-in animations - snappier 0.5s */
+  /* Smooth fade-in animations - snappy 0.4s-0.5s */
   .animate-fade-in {
-    animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     opacity: 0;
   }
   
@@ -95,29 +95,81 @@
   }
   
   .animate-blur-in {
-    animation: blurIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: blurIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     opacity: 0;
     filter: blur(10px);
   }
   
   .animate-fade-in-delay-1 {
-    animation-delay: 0.1s;
+    animation-delay: 0.08s;
   }
   
   .animate-fade-in-delay-2 {
-    animation-delay: 0.2s;
+    animation-delay: 0.16s;
   }
   
   .animate-fade-in-delay-3 {
-    animation-delay: 0.3s;
+    animation-delay: 0.24s;
   }
   
   .animate-fade-in-delay-4 {
-    animation-delay: 0.4s;
+    animation-delay: 0.32s;
   }
   
   .animate-fade-in-delay-5 {
-    animation-delay: 0.5s;
+    animation-delay: 0.4s;
+  }
+  
+  /* Scroll reveal animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Staggered children animation */
+  .stagger-reveal > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .stagger-reveal.visible > *:nth-child(1) { transition-delay: 0s; }
+  .stagger-reveal.visible > *:nth-child(2) { transition-delay: 0.08s; }
+  .stagger-reveal.visible > *:nth-child(3) { transition-delay: 0.16s; }
+  .stagger-reveal.visible > *:nth-child(4) { transition-delay: 0.24s; }
+  .stagger-reveal.visible > *:nth-child(5) { transition-delay: 0.32s; }
+  .stagger-reveal.visible > *:nth-child(6) { transition-delay: 0.4s; }
+  .stagger-reveal.visible > *:nth-child(7) { transition-delay: 0.48s; }
+  .stagger-reveal.visible > *:nth-child(8) { transition-delay: 0.56s; }
+  .stagger-reveal.visible > *:nth-child(9) { transition-delay: 0.64s; }
+  
+  .stagger-reveal.visible > * {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Pulse glow animation */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 hsl(222 100% 60% / 0.4);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px 4px hsl(222 100% 60% / 0.6);
+    }
   }
   
   @keyframes fadeIn {
@@ -176,7 +228,7 @@
   
   /* Subtle hover lift */
   .hover-lift {
-    transition: var(--transition-smooth);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
   
   .hover-lift:hover {
@@ -185,7 +237,7 @@
 
   /* Card hover effect with glow */
   .card-hover {
-    transition: var(--transition-smooth);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .card-hover:hover {
@@ -194,13 +246,13 @@
     border-color: hsl(222 100% 60% / 0.5);
   }
   
-  /* Button scale effect */
+  /* Button scale effect - snappier */
   .btn-scale {
-    transition: var(--transition-fast);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   
   .btn-scale:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
   }
   
   /* Glassmorphism card */
@@ -208,5 +260,15 @@
     background: hsl(var(--glass-bg));
     backdrop-filter: blur(12px);
     border: 1px solid hsl(var(--glass-border));
+  }
+  
+  /* Icon button hover */
+  .icon-btn {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .icon-btn:hover {
+    transform: scale(1.1);
+    color: hsl(222 100% 60%);
   }
 }
