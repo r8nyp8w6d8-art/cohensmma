@@ -39,7 +39,7 @@ const Founder = () => {
               </p>
               
               <p className="text-body text-muted-foreground animate-fade-in-up animate-fade-in-delay-3">
-                זיהיתי בעיה חוזרת – "טלפון שבור". עסקים עם ערך אמיתי שורפים כסף כי האתר לא מתכתב עם הקמפיין, והסושיאל לא מתכתב עם הקריאייטיב.
+                אך זיהיתי בעיה חוזרת אצלי ואצל בעלי העסקים סביבי   "טלפון שבור" - עסקים עם עם פוטנציאל אמיתי שורפים כסף כי האתר לא מתכתב עם הקמפיין, והסושיאל לא מתכתב עם הקריאייטיב.
               </p>
               
               <p className="text-body text-foreground font-medium animate-fade-in-up animate-fade-in-delay-4">
