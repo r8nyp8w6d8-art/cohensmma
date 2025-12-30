@@ -23,7 +23,7 @@ const Founder = () => {
                 Founder
               </span>
               <h2 className="text-display text-foreground">
-                איתן כהן
+                נעים מאוד, איתן כהן   
               </h2>
             </div>
 
