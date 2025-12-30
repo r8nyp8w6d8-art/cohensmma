@@ -43,7 +43,8 @@ const Founder = () => {
               </p>
               
               <p className="text-body text-foreground font-medium animate-fade-in-up animate-fade-in-delay-4">
-                הבנתי ששיווק טוב מצריך מערכת אחת חדה וחכמה. Cohen SMMA היא המערכת הזו.
+                הבנתי ששיווק טוב מצריך מערכת אחת חדה וחכמה, אז בניתי אותה
+ Cohen SMMA היא המערכת הזו.
               </p>
             </div>
 
