@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronDown } from "lucide-react";
-
 const Hero = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
@@ -10,7 +9,6 @@ const Hero = () => {
       });
     }
   };
-
   const scrollToServices = () => {
     const servicesSection = document.getElementById("services");
     if (servicesSection) {
@@ -19,7 +17,6 @@ const Hero = () => {
       });
     }
   };
-
   const scrollDown = () => {
     const aboutSection = document.getElementById("founder");
     if (aboutSection) {
@@ -28,9 +25,7 @@ const Hero = () => {
       });
     }
   };
-
-  return (
-    <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 py-24 bg-background relative">
+  return <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 py-24 bg-background relative">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-display-xl mb-6 animate-blur-in">
           נוכחות דיגיטלית שמביאה
@@ -39,7 +34,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up animate-fade-in-delay-1">
-          אנחנו בונים מערכות שיווק חכמות שמגדילות מחזורי מכירה חודשים על בסיס קבוע.
+          אנחנו בונים מערכות שיווק חכמות שמגדילות מחזורי מכירה חודשיים על בסיס קבוע.
           <br />
           <span className="text-primary font-bold">
             אתה תנהל את העסק שלך - אנחנו נדאג שתהיה עסוק יותר מאי פעם.
@@ -59,15 +54,10 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <button 
-        onClick={scrollDown} 
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors animate-fade-in animate-fade-in-delay-3"
-      >
+      <button onClick={scrollDown} className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors animate-fade-in animate-fade-in-delay-3">
         <span className="text-body-sm">גלול למטה</span>
         <ChevronDown className="w-5 h-5 animate-bounce-slow" />
       </button>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
