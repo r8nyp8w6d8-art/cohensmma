@@ -1,4 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import founderPortrait from "@/assets/founder-portrait.jpeg";
 
 const Founder = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -23,17 +24,14 @@ const Founder = () => {
           {/* Portrait placeholder */}
           <div className="order-1 md:order-2">
             <div 
-              className="aspect-[3/4] glass-card rounded-2xl border border-border flex items-center justify-center overflow-hidden"
+              className="aspect-[3/4] glass-card rounded-2xl border border-border overflow-hidden"
               style={{ transitionDelay: isVisible ? '0.1s' : '0s' }}
             >
-              <div className="text-center p-8">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </div>
-                <p className="text-muted-foreground text-sm">Portrait Placeholder</p>
-              </div>
+              <img 
+                src={founderPortrait} 
+                alt="איתן כהן - Founder of COHEN SMMA" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
