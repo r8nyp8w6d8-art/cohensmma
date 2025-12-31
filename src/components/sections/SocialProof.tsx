@@ -1,4 +1,6 @@
 import { useScrollReveal, useCountUp } from "@/hooks/useScrollReveal";
+import socialProofImage from "@/assets/social-proof-screenshot.png";
+
 const SocialProof = () => {
   const {
     ref,
@@ -51,15 +53,12 @@ const SocialProof = () => {
           <div className={`scroll-reveal ${isVisible ? 'visible' : ''}`} style={{
           transitionDelay: '0.2s'
         }}>
-            <div className="glass-card rounded-2xl border border-border aspect-[9/16] max-h-[500px] mx-auto flex items-center justify-center overflow-hidden">
-              <div className="text-center p-8">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <p className="text-muted-foreground text-sm">Screenshot Placeholder</p>
-              </div>
+            <div className="glass-card rounded-2xl border border-border mx-auto overflow-hidden">
+              <img 
+                src={socialProofImage} 
+                alt="COHEN SMMA Results - Social Media Analytics and Growth" 
+                className="w-full h-auto object-contain"
+              />
             </div>
           </div>
 
