@@ -1,6 +1,5 @@
 import { useScrollReveal, useCountUp } from "@/hooks/useScrollReveal";
 import socialProofImage from "@/assets/social-proof-screenshot.png";
-
 const SocialProof = () => {
   const {
     ref,
@@ -25,8 +24,8 @@ const SocialProof = () => {
             .​NUMBERS
           </h2>
           <p className="text-body-lg text-muted-foreground">
-            גברים משקרים,גם נשים
-מספרים תמיד אומרים את האמת       
+            גברים משקרים,גם נשים משקרות.
+ מספרים תמיד אומרים את האמת       
           </p>
         </div>
 
@@ -54,11 +53,7 @@ const SocialProof = () => {
           transitionDelay: '0.2s'
         }}>
             <div className="glass-card rounded-2xl border border-border mx-auto overflow-hidden">
-              <img 
-                src={socialProofImage} 
-                alt="COHEN SMMA Results - Social Media Analytics and Growth" 
-                className="w-full h-auto object-contain"
-              />
+              <img src={socialProofImage} alt="COHEN SMMA Results - Social Media Analytics and Growth" className="w-full h-auto object-contain" />
             </div>
           </div>
 
