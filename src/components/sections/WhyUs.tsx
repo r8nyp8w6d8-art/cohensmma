@@ -1,25 +1,39 @@
-import { Check } from "lucide-react";
+import { Layers, Cpu, Target, Eye } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const WhyUs = () => {
   const { ref, isVisible } = useScrollReveal();
+
+  // Function to add line breaks after periods
+  const formatWithLineBreaks = (text: string) => {
+    return text.split('.').filter(Boolean).map((sentence, index, arr) => (
+      <span key={index}>
+        {sentence.trim()}{index < arr.length - 1 ? '.' : ''}
+        {index < arr.length - 1 && <br />}
+      </span>
+    ));
+  };
   
   const reasons = [
     {
-      title: "ראש אחד, מערכת שלמה",
-      description: "אתם מדברים עם מי שמבצע. בלי טלפונים שבורים, בלי תירוצים, בלי ״זה לא הצד שלי״."
+      icon: Layers,
+      title: "מערכת 360°",
+      description: "אנחנו לא נותנים לך רק פוסט או קמפיין. אנחנו בונים לך מכונה שלמה שמתפקדת בצורה אוטונומית – מהרגע שהלקוח רואה את המודעה, דרך הנחיתה באתר, ועד הרגע שבו הוא הופך ללקוח משלם. הכל מחובר, הכל מתואם, ואין פירורים על השולחן."
     },
     {
-      title: "תוצאות מדידות",
-      description: "כל שקל שמושקע עובד. דוחות שקופים, מספרים אמיתיים, ללא עשן ומראות."
+      icon: Cpu,
+      title: "הטכנולוגיה של המחר",
+      description: "אנחנו משתמשים בכלי AI מתקדמים כדי לייעל את כל התהליכים, מניתוח השוק ועד יצירת התוכן. זה מאפשר לנו לעבוד מהר יותר, לחסוך עלויות ולהגיע לתוצאות שסוכנויות מסורתיות לא יכולות להתקרב אליהן."
     },
     {
-      title: "התאמה מלאה לעסק",
-      description: "לא מכניסים אתכם לתבנית. בונים אסטרטגיה שמתאימה לקהל, לתקציב ולמטרות שלכם."
+      icon: Target,
+      title: "אנחנו לא עובדים עם כל אחד",
+      description: "אנחנו בררנים. מאוד. כי כשנכנס לקוח חדש – אנחנו נכנסים בראש. אנחנו לא פה לייצר כמויות אלא איכות. כל עסק שנכנס אלינו מקבל תשומת לב מלאה ומחויבות לתוצאות. אם אנחנו לא מתאימים לך – נגיד לך את זה ישר."
     },
     {
-      title: "זמינות ותקשורת",
-      description: "אנחנו פה. עונים מהר, מעדכנים שוטף, ובונים יחסי עבודה ארוכי טווח."
+      icon: Eye,
+      title: "אמת, שקיפות וחזון",
+      description: "אין פה עשן ומראות. אתה יודע בדיוק מה קורה עם הכסף שלך, מה עובד ומה לא, ואיפה אנחנו מתכננים לקחת אותך. אנחנו לא מוכרים חלומות – אנחנו מייצרים תוכניות, מבצעים, ומראים תוצאות."
     }
   ];
 
@@ -34,7 +48,7 @@ const WhyUs = () => {
             למה COHEN SMMA
           </h2>
           <p className="text-body-lg text-muted-foreground">
-            מה מבדיל אותנו מכל השאר
+            מה מבדיל אותנו מכל השאר.
           </p>
         </div>
 
@@ -48,15 +62,15 @@ const WhyUs = () => {
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <Check className="w-5 h-5 text-primary" />
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <reason.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-subheading text-foreground mb-2">
                     {reason.title}
                   </h3>
                   <p className="text-body-sm text-muted-foreground leading-relaxed">
-                    {reason.description}
+                    {formatWithLineBreaks(reason.description)}
                   </p>
                 </div>
               </div>

@@ -5,10 +5,10 @@ import Founder from "@/components/sections/Founder";
 import Services from "@/components/sections/Services";
 import SocialProof from "@/components/sections/SocialProof";
 import WhyUs from "@/components/sections/WhyUs";
-import Process from "@/components/sections/Process";
 import Fit from "@/components/sections/Fit";
 import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
+import AccessibilityMenu from "@/components/AccessibilityMenu";
 
 const Index = () => {
   return (
@@ -23,13 +23,13 @@ const Index = () => {
         <Services />
         <SocialProof />
         <WhyUs />
-        <Process />
         <Fit />
         <FAQ />
         <Contact />
       </main>
 
       <Footer />
+      <AccessibilityMenu />
     </div>
   );
 };
