@@ -23,7 +23,8 @@ const SocialProof = () => {
             .​NUMBERS
           </h2>
           <p className="text-body-lg text-muted-foreground">
-            ​גברים ונשים משקרים, מספרים תמיד אומרים את האמת       
+            גברים משקרים,גם נשים
+מספרים תמיד אומרים את האמת       
           </p>
         </div>
 
