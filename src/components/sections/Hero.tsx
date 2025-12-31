@@ -33,7 +33,7 @@ const Hero = () => {
         </h1>
 
         <p className="mb-4 animate-fade-in-up animate-fade-in-delay-1 text-heading text-foreground">
-          במקרה הטוב הפרסום שלך גרוע.
+          במקרה הטוב השיווק שלך לא זז.
           <br />
           במקרה הרע הוא בכלל לא קיים.
         </p>
