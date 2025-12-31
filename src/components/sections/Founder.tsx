@@ -14,6 +14,8 @@ const Founder = () => {
     ));
   };
 
+  const founderText = `נעים מאוד, איתן כהן. התחלתי בגיל 18 עם מחשב נייד ורעיון. לאורך הדרך ראיתי סביבי מתחרים שהיו פופולריים הרבה יותר ממני, לא כי הם היו טובים או זולים יותר - אלא כי המערך השיווקי שלהם היה חזק יותר. באותם ימים לא יכולתי להרשות לעצמי להקים צוות של פרילנסרים שיצלמו, יערכו, וינהלו את הסושיאל ואת הקמפיינים שלי. ובטח שלא היו לי עשרות אלפי שקלים בחודש לשלם למשרד פרסום. ולכן נותרתי עם ברירה אחת - ללמוד איך לשווק בעצמי. מאז עברו 5 שנים במהלכן הקמתי מותגי איקומרס מאפס, ניהלתי תקציבים לקמפיינים מהכיס שלי, הוצאתי לפועל מהלכים שיווקיים שהניבו מאות אלפי שקלים, ובניתי מותג אישי שצבר מיליוני צפיות אורגניות בתוך חודשים ספורים. Cohen SMMA הוקמה כדי לתת לבעלי עסקים היום את מה שאני הייתי צריך אז: מערכת שיווקית יעילה ומדוייקת, שתדאג ששום דבר כבר לא יפריד בינך לבין מימוש הפוטנציאל של העסק שלך.`;
+
   return (
     <section className="px-6 md:px-12 lg:px-24 py-section bg-card">
       <div className="max-w-5xl mx-auto">
@@ -21,7 +23,7 @@ const Founder = () => {
           ref={ref}
           className={`grid md:grid-cols-2 gap-12 items-center scroll-reveal ${isVisible ? 'visible' : ''}`}
         >
-          {/* Portrait placeholder */}
+          {/* Portrait */}
           <div className="order-1 md:order-2">
             <div 
               className="aspect-[3/4] glass-card rounded-2xl border border-border overflow-hidden"
@@ -48,26 +50,8 @@ const Founder = () => {
             </div>
 
             <div className="space-y-4">
-              <p className="text-body text-foreground leading-relaxed">
-                {formatWithLineBreaks("ב-2020, כשהעולם עצר מלכת והעסקים עברו לאונליין בין לילה – אני הייתי שם. התחלתי בגיל 18, עם מחשב נייד ורעיון.")}
-              </p>
-              
               <p className="text-body text-muted-foreground leading-relaxed">
-                {formatWithLineBreaks("בלי קשרים ובלי תקציבים, ייסדתי מותגי e-commerce מאפס, ניהלתי קמפיינים שייצרו עשרות אלפי שקלים, ובניתי מותג אישי שצבר מיליוני צפיות תוך חודשים ספורים.")}
-              </p>
-              
-              <p className="text-body text-muted-foreground leading-relaxed">
-                {formatWithLineBreaks("זיהיתי בעיה חוזרת – \"טלפון שבור\". עסקים עם ערך אמיתי שורפים כסף כי האתר לא מתכתב עם הקמפיין, והסושיאל לא מתכתב עם הקריאייטיב.")}
-              </p>
-              
-              <p className="text-body text-foreground font-medium leading-relaxed">
-                {formatWithLineBreaks("הבנתי ששיווק טוב מצריך מערכת אחת חדה וחכמה. Cohen SMMA היא המערכת הזו.")}
-              </p>
-            </div>
-
-            <div className="pt-4 border-t border-border">
-              <p className="text-body-sm text-muted-foreground leading-relaxed">
-                {formatWithLineBreaks("ראש אחד שרואה את התמונה המלאה – מהאסטרטגיה, לבניית האתר ועד לימי הצילום. הכל נבנה באמצעות אותן הידיים כדי לעבוד בסנכרון מוחלט.")}
+                {formatWithLineBreaks(founderText)}
               </p>
             </div>
           </div>

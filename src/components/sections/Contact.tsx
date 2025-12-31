@@ -19,8 +19,19 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    // Send email via mailto with form data
+    const subject = encodeURIComponent(`פנייה חדשה מ-${formData.fullName} - ${formData.businessName}`);
+    const body = encodeURIComponent(
+      `שם מלא: ${formData.fullName}\n` +
+      `שם העסק: ${formData.businessName}\n` +
+      `טלפון: ${formData.phone}\n\n` +
+      `הודעה:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:cohensmma@gmail.com?subject=${subject}&body=${body}`;
+
+    // Show success toast
+    await new Promise(resolve => setTimeout(resolve, 500));
     toast({
       title: "הפרטים התקבלו",
       description: "אחזור אליך בהקדם לשיחת היכרות."

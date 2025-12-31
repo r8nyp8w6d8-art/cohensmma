@@ -1,18 +1,33 @@
 import { Check, X } from "lucide-react";
 
 const Fit = () => {
-  const forYou = [
-    "בעלי עסקים שמוכנים להשקיע בנוכחות דיגיטלית אמיתית",
-    "מי שמחפש שותף לטווח ארוך, לא פתרון קסם חד פעמי",
-    "עסקים עם מוצר או שירות טוב שמוכנים לצמוח",
-    "מי שפתוח לשיתוף פעולה ותקשורת רציפה",
-  ];
+  // Function to add line breaks after periods
+  const formatWithLineBreaks = (text: string) => {
+    return text.split('.').filter(Boolean).map((sentence, index, arr) => (
+      <span key={index}>
+        {sentence.trim()}{index < arr.length - 1 ? '.' : ''}
+        {index < arr.length - 1 && <br />}
+      </span>
+    ));
+  };
 
-  const notForYou = [
-    "מי שמחפש הבטחות לתוצאות תוך שבוע",
-    "מי שרוצה הכל בזול ומהר",
-    "מי שלא מוכן להשקיע זמן בתהליך",
-    "מי שמחפש רק ויראליות ללא תוכנית עסקית",
+  const fitItems = [
+    {
+      forYou: "אתה מבין שתקציב השיווק שלך הוא לא עוד הוצאה אלא השקעה.",
+      notForYou: "אתה בוחר את איש השיווק שיעלה לך הכי פחות."
+    },
+    {
+      forYou: "אתה מחפש שותף לטווח ארוך שיגדיל לך את ההכנסות בעקביות.",
+      notForYou: "אתה מחפש נוסחאות קסם כדי להכפיל את ההכנסות שלך בשבוע הראשון."
+    },
+    {
+      forYou: "אתה מאמין ששיווק טוב זה כל מה שהעסק שלך צריך כדי לקפוץ מדרגה.",
+      notForYou: "אתה סקפטי, לא מאמין בשיווק וחושב שקופונים בעיתון הם הדבר האמיתי."
+    },
+    {
+      forYou: "יש לך ראש פתוח ואתה מוכן לתת לאיש מקצוע להדריך אותך.",
+      notForYou: "אתה כל כך מבין בשיווק שאתה יכול לפתוח משרד פרסום משלך."
+    }
   ];
 
   return (
@@ -36,14 +51,14 @@ const Fit = () => {
               בשבילכם
             </h3>
             <ul className="space-y-4">
-              {forYou.map((item, index) => (
+              {fitItems.map((item, index) => (
                 <li
                   key={index}
                   className="flex items-start gap-3 text-body text-foreground animate-fade-in-up"
                   style={{ animationDelay: `${(index + 1) * 0.1}s` }}
                 >
                   <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  {item}
+                  <span>{formatWithLineBreaks(item.forYou)}</span>
                 </li>
               ))}
             </ul>
@@ -57,14 +72,14 @@ const Fit = () => {
               לא בשבילכם
             </h3>
             <ul className="space-y-4">
-              {notForYou.map((item, index) => (
+              {fitItems.map((item, index) => (
                 <li
                   key={index}
                   className="flex items-start gap-3 text-body text-muted-foreground animate-fade-in-up"
                   style={{ animationDelay: `${(index + 2) * 0.1}s` }}
                 >
                   <X className="w-5 h-5 text-muted-foreground/50 flex-shrink-0 mt-0.5" />
-                  {item}
+                  <span>{formatWithLineBreaks(item.notForYou)}</span>
                 </li>
               ))}
             </ul>
