@@ -41,7 +41,12 @@ const Hero = () => {
         <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up animate-fade-in-delay-2">
           אנחנו בונים לעסקים נוכחות ברשתות החברתיות שמייצרת אמון, חשיפה ותוצאות
           שבאות לידי ביטוי במחזורים החודשיים -{" "}
-          <strong className="text-foreground">לא בכמות הלייקים.</strong>
+          <strong className="text-foreground">
+אנחנו בונים מערכות שיווק חכמות שמגדילות מחזורי מכירה חודשים על בסיס קבוע.
+
+
+אתה תנהל את העסק שלך
+אנחנו נדאג שתהיה עסוק יותר מאי פעם</strong>
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-fade-in-delay-3">
