@@ -1,12 +1,12 @@
 import { useScrollReveal, useCountUp } from "@/hooks/useScrollReveal";
-
 const SocialProof = () => {
-  const { ref, isVisible } = useScrollReveal();
-  
+  const {
+    ref,
+    isVisible
+  } = useScrollReveal();
   const viewsCount = useCountUp(5000000, 2000, isVisible);
   const projectsCount = useCountUp(50, 2000, isVisible);
   const growthCount = useCountUp(300, 2000, isVisible);
-
   const formatNumber = (num: number) => {
     if (num >= 1000000) {
       return `${(num / 1000000).toFixed(0)}M+`;
@@ -16,28 +16,22 @@ const SocialProof = () => {
     }
     return `${num}`;
   };
-
-  return (
-    <section className="px-6 md:px-12 lg:px-24 py-section bg-background">
+  return <section className="px-6 md:px-12 lg:px-24 py-section bg-background">
       <div className="max-w-6xl mx-auto">
-        <div 
-          ref={ref}
-          className={`text-center mb-16 scroll-reveal ${isVisible ? 'visible' : ''}`}
-        >
+        <div ref={ref} className={`text-center mb-16 scroll-reveal ${isVisible ? 'visible' : ''}`}>
           <h2 className="text-display mb-4">
-            תוצאות מדברות בשטח
+            .​NUMBERS
           </h2>
           <p className="text-body-lg text-muted-foreground">
-            מספרים אמיתיים, תוצאות אמיתיות
+            ​גברים ונשים משקרים, מספרים תמיד אומרים את האמת       
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Left stats */}
-          <div 
-            className={`space-y-6 scroll-reveal ${isVisible ? 'visible' : ''}`}
-            style={{ transitionDelay: '0.1s' }}
-          >
+          <div className={`space-y-6 scroll-reveal ${isVisible ? 'visible' : ''}`} style={{
+          transitionDelay: '0.1s'
+        }}>
             <div className="glass-card rounded-xl p-6 text-center card-hover">
               <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                 {formatNumber(viewsCount)}
@@ -53,10 +47,9 @@ const SocialProof = () => {
           </div>
 
           {/* Center screenshot placeholder */}
-          <div 
-            className={`scroll-reveal ${isVisible ? 'visible' : ''}`}
-            style={{ transitionDelay: '0.2s' }}
-          >
+          <div className={`scroll-reveal ${isVisible ? 'visible' : ''}`} style={{
+          transitionDelay: '0.2s'
+        }}>
             <div className="glass-card rounded-2xl border border-border aspect-[9/16] max-h-[500px] mx-auto flex items-center justify-center overflow-hidden">
               <div className="text-center p-8">
                 <div className="w-20 h-20 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -70,10 +63,9 @@ const SocialProof = () => {
           </div>
 
           {/* Right stats */}
-          <div 
-            className={`space-y-6 scroll-reveal ${isVisible ? 'visible' : ''}`}
-            style={{ transitionDelay: '0.3s' }}
-          >
+          <div className={`space-y-6 scroll-reveal ${isVisible ? 'visible' : ''}`} style={{
+          transitionDelay: '0.3s'
+        }}>
             <div className="glass-card rounded-xl p-6 text-center card-hover">
               <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                 {growthCount}%
@@ -89,8 +81,6 @@ const SocialProof = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SocialProof;
