@@ -42,10 +42,12 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-fade-in-delay-2">
-          <Button variant="hero" size="lg" onClick={scrollToContact} className="group btn-scale">
-            בואו נדבר
-            <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-          </Button>
+          <a href="https://wa.me/972559310292" target="_blank" rel="noopener noreferrer">
+            <Button variant="hero" size="lg" className="group btn-scale">
+              בואו נדבר
+              <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+            </Button>
+          </a>
 
           <Button variant="hero-outline" size="lg" onClick={scrollToServices} className="btn-scale">
             מה אנחנו עושים

@@ -10,7 +10,7 @@ const Services = () => {
   const services = [{
     icon: Zap,
     title: "אוטומציה",
-    description: "משפכי מכירה אוטומטיים שעובדים 24/7. מהרגע שנכנס ליד – ועד הסגירה."
+    description: "בניית מערכות חכמות שחוסכות זמן וממירות לידים באופן אוטומטי."
   }, {
     icon: Target,
     title: "קמפיינים",
@@ -18,7 +18,7 @@ const Services = () => {
   }, {
     icon: Camera,
     title: "ימי צילום",
-    description: "הפקת תוכן מותאם פלטפורמה ברמה קולנועית."
+    description: "הפקת תוכן מותאם פלטפורמה שהופך צופים ללקוחות."
   }, {
     icon: Palette,
     title: "עיצוב גרפי",
@@ -30,19 +30,19 @@ const Services = () => {
   }, {
     icon: Instagram,
     title: "ניהול סושיאל",
-    description: "ניהול מלא של הפרופיל העסקי שלך – פרסום, אינטראקציה ובניית קהילה נאמנה."
+    description: "תוכן עקבי ואיכותי שבונה קהילה וזהות ייחודית."
   }, {
     icon: User,
     title: "משפיעניות",
-    description: "שיתופי פעולה עם יוצרי תוכן שמביאים חשיפה לקהלים חדשים ואמון מיידי."
+    description: "פרסום דרך מובילי דעת קהל שיוצרים אמון מהיר אצל הלקוח."
   }, {
     icon: RefreshCcw,
     title: "רימרקטינג",
-    description: "מעקב אחרי גולשים שלא סגרו והחזרתם למשפך – עד שהם הופכים ללקוחות."
+    description: "מערכת חכמה שלא משאירה פירורים על השולחן, נשארים בתודעה של הלקוח."
   }, {
     icon: ShoppingCart,
     title: "איקומרס",
-    description: "הקמה, עיצוב ואופטימיזציה של חנויות אונליין שמגדילות סל ומפחיתות נטישה."
+    description: "הקמה ואופטימיזציה של חנויות אונליין ודפי נחיתה להגדלת המכירות."
   }];
   return <section id="services" className="px-6 md:px-12 lg:px-24 py-section bg-background">
       <div className="max-w-6xl mx-auto">
