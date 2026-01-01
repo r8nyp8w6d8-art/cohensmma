@@ -4,17 +4,31 @@ import founderPortrait from "@/assets/founder-portrait.jpeg";
 const Founder = () => {
   const { ref, isVisible } = useScrollReveal();
 
-  // Function to add line breaks after periods
-  const formatWithLineBreaks = (text: string) => {
-    return text.split('.').filter(Boolean).map((sentence, index, arr) => (
-      <span key={index}>
-        {sentence.trim()}{index < arr.length - 1 ? '.' : ''}
-        {index < arr.length - 1 && <br />}
-      </span>
-    ));
+  // Function to format text with $ as line breaks and *text* as bold
+  const formatFounderText = (text: string) => {
+    // Split by $ for line breaks
+    const lines = text.split('$');
+    
+    return lines.map((line, lineIndex) => {
+      // Process bold text within each line (text between asterisks)
+      const parts = line.split(/(\*[^*]+\*)/g);
+      
+      return (
+        <span key={lineIndex}>
+          {parts.map((part, partIndex) => {
+            if (part.startsWith('*') && part.endsWith('*')) {
+              // Remove asterisks and make bold
+              return <strong key={partIndex}>{part.slice(1, -1)}</strong>;
+            }
+            return <span key={partIndex}>{part}</span>;
+          })}
+          {lineIndex < lines.length - 1 && <br />}
+        </span>
+      );
+    });
   };
 
-  const founderText = `נעים מאוד, איתן כהן. התחלתי בגיל 18 עם מחשב נייד ורעיון. לאורך הדרך ראיתי סביבי מתחרים שהיו פופולריים הרבה יותר ממני, לא כי הם היו טובים או זולים יותר - אלא כי המערך השיווקי שלהם היה חזק יותר. באותם ימים לא יכולתי להרשות לעצמי להקים צוות של פרילנסרים שיצלמו, יערכו, וינהלו את הסושיאל ואת הקמפיינים שלי. ובטח שלא היו לי עשרות אלפי שקלים בחודש לשלם למשרד פרסום. ולכן נותרתי עם ברירה אחת - ללמוד איך לשווק בעצמי. מאז עברו 5 שנים במהלכן הקמתי מותגי איקומרס מאפס, ניהלתי תקציבים לקמפיינים מהכיס שלי, הוצאתי לפועל מהלכים שיווקיים שהניבו מאות אלפי שקלים, ובניתי מותג אישי שצבר מיליוני צפיות אורגניות בתוך חודשים ספורים. Cohen SMMA הוקמה כדי לתת לבעלי עסקים היום את מה שאני הייתי צריך אז: מערכת שיווקית יעילה ומדוייקת, שתדאג ששום דבר כבר לא יפריד בינך לבין מימוש הפוטנציאל של העסק שלך.`;
+  const founderText = `נעים מאוד, איתן כהן. $התחלתי בגיל 18 עם מחשב נייד ורעיון. לאורך הדרך ראיתי סביבי מתחרים שהיו פופולריים הרבה יותר ממני, $ לא כי הם היו טובים או זולים יותר - אלא כי המערך השיווקי שלהם היה חזק יותר. באותם ימים לא יכולתי להרשות לעצמי להקים צוות של פרילנסרים שיצלמו, יערכו, וינהלו את הסושיאל ואת הקמפיינים שלי. ובטח שלא היו לי עשרות אלפי שקלים בחודש לשלם למשרד פרסום. ולכן נותרתי עם ברירה אחת - ללמוד איך לשווק בעצמי. מאז עברו 5 שנים במהלכן הקמתי מותגי איקומרס מאפס, ניהלתי תקציבים לקמפיינים מהכיס שלי, הוצאתי לפועל מהלכים שיווקיים שהניבו מאות אלפי שקלים, ובניתי מותג אישי שצבר מיליוני צפיות אורגניות בתוך חודשים ספורים. Cohen SMMA הוקמה כדי לתת לבעלי עסקים היום את מה שאני הייתי צריך אז: $ מערכת שיווקית יעילה ומדוייקת, שתדאג ששום דבר כבר לא יפריד בינך לבין מימוש הפוטנציאל של העסק שלך`;
 
   return (
     <section className="px-6 md:px-12 lg:px-24 py-section bg-card">
@@ -51,7 +65,7 @@ const Founder = () => {
 
             <div className="space-y-4">
               <p className="text-body text-muted-foreground leading-relaxed">
-                {formatWithLineBreaks(founderText)}
+                {formatFounderText(founderText)}
               </p>
             </div>
           </div>
