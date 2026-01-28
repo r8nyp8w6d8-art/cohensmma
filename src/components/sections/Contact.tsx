@@ -12,13 +12,9 @@ const Contact = () => {
           ref={ref}
           className={`flex flex-col items-center text-center scroll-reveal ${isVisible ? 'visible' : ''}`}
         >
-          <h2 className="text-display text-primary-foreground mb-4">
+          <h2 className="text-display text-primary-foreground mb-8">
             מוכנים להתחיל?
           </h2>
-
-          <p className="text-body-lg text-primary-foreground/80 mb-8 max-w-xl">
-            לחצו על הכפתור ונקבע שיחת היכרות קצרה ללא התחייבות.
-          </p>
 
           {/* Large WhatsApp CTA Button */}
           <a
