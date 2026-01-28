@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Instagram, Mail } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Contact = () => {
@@ -30,9 +30,8 @@ const Contact = () => {
             <Button
               variant="hero"
               size="xl"
-              className="bg-primary-foreground text-primary font-bold hover:bg-primary-foreground/90 rounded-xl px-12 py-6 text-xl btn-scale group"
+              className="bg-primary-foreground text-primary font-bold hover:bg-primary-foreground/90 rounded-xl px-12 py-6 text-xl btn-scale"
             >
-              <MessageCircle className="w-6 h-6 transition-transform group-hover:scale-110" />
               בואו נדבר בוואטסאפ
             </Button>
           </a>
